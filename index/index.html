@@ -1,121 +1,129 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aguardando seu Website</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Temporariamente Indisponível</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-          Oxygen, Ubuntu, Cantarell, sans-serif;
-        background: linear-gradient(135deg, #27272a 0%, #18181b 100%);
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #e2e8f0;
-        position: relative;
-        overflow: hidden;
-      }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #f1f5f9;
+            position: relative;
+            overflow: hidden;
+        }
 
-      .container {
-        text-align: center;
-        padding: 2rem;
-        position: relative;
-        z-index: 1;
-        max-width: 600px;
-        width: 100%;
-      }
-
-      .logo {
-        width: 80px;
-        height: 80px;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        border-radius: 20px;
-        margin: 0 auto 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        font-size: 2rem;
-      }
-
-      h1 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-        background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        line-height: 1.2;
-      }
-
-      .subtitle {
-        font-size: 1.1rem;
-        color: #94a3b8;
-        margin-bottom: 3rem;
-        line-height: 1.6;
-        font-weight: 300;
-      }
-
-      .loading {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-        margin-bottom: 2rem;
-      }
-
-      .dot {
-        width: 8px;
-        height: 8px;
-        background: #667eea;
-        border-radius: 50%;
-      }
-
-      .status {
-        font-size: 0.9rem;
-        color: #64748b;
-        font-weight: 400;
-      }
-
-      @media (max-width: 640px) {
         .container {
-          padding: 1.5rem;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            border-radius: 20px;
+            margin: 0 auto 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(239, 68, 68, 0.3);
+            font-size: 2rem;
         }
 
         h1 {
-          font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #fca5a5 0%, #ef4444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
         }
 
         .subtitle {
-          font-size: 1rem;
+            font-size: 1.1rem;
+            color: #d1d5db;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+            font-weight: 300;
         }
-      }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(239, 68, 68, 0.15);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #fca5a5;
+            padding: 0.5rem 1rem;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2);
+        }
+
+        .message {
+            font-size: 0.9rem;
+            color: #e5e7eb;
+            font-weight: 400;
+            background: rgba(17, 24, 39, 0.6);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-top: 3px solid #ef4444;
+            box-shadow: 
+                0 0 30px rgba(239, 68, 68, 0.15),
+                inset 0 1px 0 rgba(239, 68, 68, 0.1);
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .message {
+                padding: 1rem;
+                font-size: 0.85rem;
+            }
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <div class="logo">🌐</div>
-      <h1>Aguardando seu Website</h1>
-      <p class="subtitle">
-        Seu site está online e funcionando perfeitamente.<br />
-        Comece a criar suas páginas agora mesmo.
-      </p>
-      <div class="loading">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-      <p class="status">Pronto para uso</p>
+        <div class="icon">🚫</div>
+        <h1>Página Indisponível</h1>
+        <p class="subtitle">
+            Esta página foi temporariamente despublicada<br>
+            pelo proprietário do site.
+        </p>
+        <div class="status-badge">
+            Despublicada
+        </div>
     </div>
-  </body>
+</body>
 </html>
